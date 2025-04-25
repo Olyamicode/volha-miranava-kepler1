@@ -1,10 +1,6 @@
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Montserrat', sans-serif;;
     background: #f6eee3;
     color: #333;
     line-height: 1.6;
@@ -49,38 +45,75 @@
     font-weight: 600;
     margin-bottom: 15px;
   }
+
   
-  
-  #About {
+  .About {
     text-align: left;
   }
-  #Experience ul {
+  .experience-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     padding-left: 0;
+    margin: 0;
   }
   
-  #Experience li {
+  .experience-item {
     background-color: #ffffff;
+    padding: 20px;
     border-left: 5px solid #0a2f5c;
-    padding: 15px 20px;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     list-style: none;
     font-weight: 500;
   }
   
-  
-  #Connect a {
-    display: inline-block;
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 10px;
-    padding: 10px 15px;
+    flex-wrap: wrap;
+  }
+  
+  .job-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #0a2f5c;
+  }
+  
+  .job-dates {
+    font-size: 0.95rem;
+    color: #666;
+  }
+  
+  .job-description {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  
+  .connect-section .social-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .social-links a {
+    padding: 10px 20px;
     background-color: #0a2f5c;
     color: #ffffff;
     text-decoration: none;
     border-radius: 6px;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
   }
-
+  
+  .social-links a:hover {
+    background-color: #083062;
+    transform: scale(1.05);
+  }
  

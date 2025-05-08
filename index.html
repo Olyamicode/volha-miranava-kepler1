@@ -9,12 +9,18 @@
         <title>Volha Miranava's Portfolio</title>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/media.css" />
       </head>
 <body>
   <header>
     <div class="header-container">
       <nav>
-        <ul>
+        <div class="hamburger" id="hamburger-icon">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul id="nav-list">
           <li><a href="#About">About</a></li>
           <li><a href="#Experience">Experience</a></li>
           <li><a href="#Skills">Skills</a></li>
@@ -22,6 +28,15 @@
           <li><a href="#Connect">Connect</a></li>
         </ul>
       </nav>
+      <!-- JavaScript for Menu Toggle -->
+<script>
+  const hamburger = document.getElementById('hamburger-icon');
+  const navList = document.getElementById('nav-list');
+
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('show'); // Toggle the 'show' class on the nav list
+  });
+</script>
       <div class="intro">
         <h1>Volha Miranava</h1>
         <p>I'm a UX/UI designer, web developer.</p>

@@ -1,0 +1,112 @@
+
+/* Mobile Styles (max-width: 599px) */
+@media (max-width: 599px) {
+    nav ul {
+      display: none; /* Hide the regular horizontal navigation */
+      flex-direction: column;
+      background-color: #f6eee3; 
+      width: 100%;
+      padding: 20px 0;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+  
+    
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;  /* Adjust the top position if needed */
+      right: 20px; /* Align the hamburger icon to the right */
+    }
+  
+    .hamburger .bar {
+      height: 4px;
+      background-color: #333;
+      border-radius: 4px;
+    }
+  
+    
+    nav ul.show {
+      display: flex; 
+    }
+  
+    nav a {
+      padding: 10px;
+      font-size: 1.2rem;
+      color: #000;
+      text-align: center;
+    }
+  
+    nav a:hover {
+      background-color: #0a2f5c;
+      color: white;
+    }
+  }
+  /* Tablet Styles (min-width: 600px) */
+  @media (min-width: 600px) {
+    /* Header */
+    h2 {
+      font-size: 2.2rem;
+      color: #0a2f5c;
+    }
+  
+    /* Navigation */
+    nav ul {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 30px;
+    }
+    nav a {
+      padding: 0;
+      font-size: 1rem;
+    }
+  
+    /* Experience List */
+    .experience-item {
+      padding: 30px;
+      background-color: #f1f1f1;
+    }
+  
+    /* Intro Text */
+    .intro h1 {
+      font-size: 3rem;
+      font-style: italic;
+    }
+  }
+  
+  /* Desktop Styles (min-width: 900px) */
+  @media (min-width: 900px) {
+    /* Header */
+    h2 {
+      font-size: 2.5rem;
+      color: #083062;
+    }
+  
+    /* Navigation */
+    nav ul {
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+  
+    /* Experience List */
+    .experience-item {
+      background-color: #e5e5e5;
+      padding: 40px;
+    }
+  
+    /* Intro Text */
+    .intro h1 {
+      font-size: 3.5rem;
+      font-style: normal;
+    }
+  }
+  

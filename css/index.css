@@ -1,7 +1,7 @@
 
   body {
     font-family: 'Montserrat', sans-serif;;
-    background: #f6eee3;
+    background: rgba(246, 238, 227, 0.6);
     color: #333;
     line-height: 1.6;
     padding: 20px;
@@ -137,4 +137,20 @@ nav a {
   border-radius: 4px;
 }
 
- 
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#Skills li {
+  background-color: rgba(10, 47, 92, 0.1);  /* Light blue with transparency */
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #0a2f5c;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

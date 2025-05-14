@@ -120,7 +120,12 @@ nav a {
     background-color: #083062;
     transform: scale(1.05);
   }
-
+  footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
 /* Hamburger Menu */
 .hamburger {
   display: none;
@@ -153,4 +158,62 @@ nav a {
   font-weight: 500;
   color: #0a2f5c;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#leave-message form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(10, 47, 92, 0.05);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+#leave-message input,
+#leave-message textarea,
+#leave-message button {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+#leave-message button {
+  background-color: #0a2f5c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#leave-message button:hover {
+  background-color: #083062;
+}
+
+#messages ul {
+  list-style: none;
+  padding: 0;
+}
+
+#messages li {
+  background-color: rgba(0, 0, 0, 0.03);
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 4px solid #0a2f5c;
+  border-radius: 4px;
+}
+
+#messages button {
+  margin-left: 15px;
+  padding: 5px 10px;
+  background-color: #c00;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#messages button:hover {
+  background-color: #900;
 }

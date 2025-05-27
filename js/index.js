@@ -1,3 +1,4 @@
+
 const today = new Date();
 const thisYear = today.getFullYear();
 
@@ -64,3 +65,28 @@ messageForm.addEventListener("submit", function (event) {
 
   messageForm.reset();
 });
+fetch("https://api.github.com/users/Olyamicode/repos")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error(`GitHub API error: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(repositories => {
+    console.log(repositories); // Debug: See data in console
+
+    const projectSection = document.getElementById("projects");
+    const projectList = projectSection.querySelector("ul");
+
+    repositories.forEach(repo => {
+      const project = document.createElement("li");
+      project.innerHTML = `<a href="${repo.html_url}" target="_blank">${repo.name}</a>`;
+      projectList.appendChild(project);
+    });
+  })
+  .catch(error => {
+    console.error("Failed to load repositories:", error);
+
+    const projectSection = document.getElementById("projects");
+    projectSection.innerHTML += `<p style="color: red;">Unable to load projects at this time.</p>`;
+  });

@@ -109,4 +109,17 @@
       font-style: normal;
     }
   }
-  
+  @media (max-width: 768px) {
+  .about-split {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text, .about-image {
+    width: 100%;
+  }
+
+  .about-text h2 {
+    margin-top: 0;
+  }
+}

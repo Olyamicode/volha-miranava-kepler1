@@ -8,6 +8,28 @@
     max-width: 800px;
     margin: 0 auto;
   }
+  body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at top right, rgba(255, 220, 100, 0.3), transparent 70%);
+  pointer-events: none; /* So it doesn’t interfere with clicks */
+  z-index: -1;
+}
+body::after {
+  content: "";
+  position: fixed; /* changed from absolute to fixed */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(to top, rgba(128, 128, 128, 0.3), transparent);
+  z-index: -1;
+  pointer-events: none;
+}
  nav ul {
   display: flex;
   flex-direction: column;  /* stack items vertically */
@@ -33,7 +55,12 @@ nav a {
     padding: 20px;
   }
   
+  h1, h2, h3, h4, h5, h6 {
+  font-family: "Neue Machina Regular";
+  color: #0a2f5c; 
   
+  
+ }
   .intro h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -45,7 +72,7 @@ nav a {
   
   h2 {
     font-size: 2rem;
-    color: #1a1a1a;
+    color: #0a2f5c;
     font-weight: 600;
     margin-bottom: 15px;
   }
@@ -53,7 +80,39 @@ nav a {
   
   .About {
     text-align: left;
+    padding-top: 0;
+    margin-top: 20px;
   }
+  .about-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1rem;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* soft shadow */
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  
+}
   .experience-list {
     display: flex;
     flex-direction: column;
@@ -159,61 +218,92 @@ nav a {
   color: #0a2f5c;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.skills-list li:hover {
+  background-color: #0a2f5c;
+  color: white;
+  transform: scale(1.05);
+}
+#leave-message {
+  text-align: center;
+  margin-top: 40px;
+  padding:  20px;
+}
 
 #leave-message form {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  background-color: rgba(10, 47, 92, 0.05);
+  gap: 15px;
+  text-align: left; /* Align form labels/inputs inside the form */
   padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* Light background with transparency */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 #leave-message input,
-#leave-message textarea,
-#leave-message button {
-  font-size: 1rem;
-  padding: 10px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+#leave-message textarea {
   width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box; 
 }
 
 #leave-message button {
+  width: fit-content;
+  align-self: center;
+  padding: 10px 20px;
   background-color: #0a2f5c;
-  color: white;
+  color: #fff;
+  font-weight: bold;
   border: none;
+  border-radius: 6px;
   cursor: pointer;
-}
-
-#leave-message button:hover {
-  background-color: #083062;
+  transition: background 0.3s ease;
 }
 
 #messages ul {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
 }
 
 #messages li {
-  background-color: rgba(0, 0, 0, 0.03);
-  padding: 10px;
-  margin: 10px 0;
-  border-left: 4px solid #0a2f5c;
-  border-radius: 4px;
+  background-color: rgba(10, 47, 92, 0.05);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  word-wrap: break-word;         
+  overflow-wrap: break-word;     
+  max-width: 100%;               
+  box-sizing: border-box;
 }
-
-#messages button {
-  margin-left: 15px;
-  padding: 5px 10px;
-  background-color: #c00;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
 #messages button:hover {
   background-color: #900;
+}
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  list-style: none;
+}
+
+#projects li {
+  background-color: rgba(10, 47, 92, 0.05);
+  padding: 10px 15px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+#projects a {
+  text-decoration: none;
+  color: #0a2f5c;
+  font-weight: bold;
+}
+
+#projects a:hover {
+  color: #083062;
 }
